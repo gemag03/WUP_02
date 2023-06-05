@@ -35,6 +35,26 @@ veggy <- cabbages
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+
+
+```{r}
+# Load required library
+library(ggplot2)
+
+# Create the box plot with centered and bigger title
+ggplot(veggy, aes(x = Cult, y = VitC)) +
+  geom_boxplot() +
+  xlab("Cult") +
+  ylab("Vitamin C") +
+  ggtitle("Box Plot of Vitamin C by Cult") +
+  theme(plot.title = element_text(hjust = 0.5, size = 20))
+
+```
+
+
+Looking at the 2 boxes we could see the c52 box is higher and if we were to put them in the same column, they would not overlap. The middle 50% is higher in the c52 than the middle 50% of c39. We think we will find a statistical difference within these two methods.
+
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
